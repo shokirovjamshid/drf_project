@@ -1,0 +1,18 @@
+services:
+  backend_service:
+    build: .
+    command: >
+      uv run gunicorn root.wsgi:application --bind 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+
+  postgres_service:
+    image: postgres:alpine
+    environment:
+      - POSTGRES_PASSWORD=74719909
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:var/lib/postgresql
+volumes:
+  pg_data:

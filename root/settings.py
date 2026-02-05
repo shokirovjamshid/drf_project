@@ -74,7 +74,7 @@ DATABASES = {
         'NAME': 'drf_db',
         'USER': 'postgres',
         'PASSWORD': '74719909',
-        'HOST': 'localhost',
+        'HOST': 'postgres_service',
         'PORT': 5432
     }
 }
